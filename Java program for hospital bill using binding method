@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class binding {
+
+    Scanner s = new Scanner(System.in);
+    String name, dr, dis, ser, dateA, dateD;
+    String bill, age;
+    int serChrg, drfee;
+
+    void patient() {
+        System.out.println("Avaital hospital");
+        System.out.println("------------------------------------------");
+        System.out.println("Patient's name:");
+        name = s.nextLine();
+        System.out.println("patient's age:");
+        age = s.nextLine();
+        System.out.println("Diagnosed with:");
+        dis = s.nextLine();
+        System.out.println("Doctor consulted:");
+        dr = s.nextLine();
+        System.out.println("Services used:");
+        ser = s.nextLine();
+        System.out.println("Date of admitted:");
+        dateA = s.nextLine();
+        System.out.println("Date of Discharge:");
+        dateD = s.nextLine();
+        System.out.println("Service charge amount:");
+        serChrg = s.nextInt();
+        System.out.println("Doctor fees:");
+        drfee = s.nextInt();
+        int tot = serChrg + drfee;
+        System.out.println("Total bill:" + tot);
+    }
+}
+
+class dis extends binding {
+
+    void discharge() {
+
+        System.out.println("Thanku");
+    }
+}
+
+class hospital {
+
+    public static void main(String args[]) {
+
+        binding obj = new binding();
+        obj.patient();
+        binding bj = new dis();
+        bj.patient();
+    }
+}
+// OUTPUT OF THE CODE
+
+Avaital hospital
+------------------------------------------
+Patient's name:
+San
+patient's age:
+20
+Diagnosed with:
+Fever
+Doctor consulted:
+Dr.Amit
+Services used:
+Lab
+Date of admitted:
+14/9
+Date of Discharge:
+16/9
+Service charge amount:
+500
+Doctor fees:
+1000
+Total bill:1500
